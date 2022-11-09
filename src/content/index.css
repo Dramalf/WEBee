@@ -1,11 +1,11 @@
 #bee-extention-wrapper{
     position: fixed;
     top: 100px;
+    left: 100px;
     z-index: 2147483647;
-    width: 100px;
-    height: 100px;
 }
 #bee-canvas{
+    position: fixed;
     width: 100px;
     height: 100px;
 }
