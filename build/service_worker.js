@@ -1,0 +1,1 @@
+!function(){console.log("service");const e=chrome.runtime.getURL("/bee/scene.gltf");console.log(e,"url")}();

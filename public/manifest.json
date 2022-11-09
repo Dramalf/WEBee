@@ -1,0 +1,46 @@
+{
+  "name": "webee",
+  "description": "A little bee on you webpage",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+  "content_scripts":[
+    {
+      "matches":["<all_urls>"],
+      "js":["content.js"],
+      "css":["content.css"]
+    }
+  ]
+  ,
+  "web_accessible_resources": [
+    {
+      "resources": [ "bee/scene.gltf" ],
+      "matches": [ "<all_urls>"]
+    },
+    {
+      "resources": [ "bee/scene.bin" ],
+      "matches": [ "<all_urls>" ]
+    },
+    {
+      "resources": [ "bee/textures/*.png" ],
+      "matches": [ "<all_urls>" ]
+    }
+
+  ],
+  "action": {
+    "default_icon": {
+      "48": "/images/icon48.png"
+    }
+  },
+  "icons": {
+    "48": "/images/icon48.png"
+  }
+}
